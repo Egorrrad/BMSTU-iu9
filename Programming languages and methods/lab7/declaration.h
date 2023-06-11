@@ -1,5 +1,5 @@
 //
-// Created by Egor Diachkov on 07/04/2023.
+
 //
 
 #ifndef UNTITLED_DECLARATION_H
