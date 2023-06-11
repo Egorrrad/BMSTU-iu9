@@ -1,6 +1,4 @@
-//
-// Created by Egor Diachkov on 14/04/2023.
-//
+
 
 #ifndef LAB8_SPARSETABLE_H
 #define LAB8_SPARSETABLE_H
