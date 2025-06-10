@@ -1,0 +1,16 @@
+x = 5;
+y = 10;
+z = x + y * 2;
+if (z > 15) {
+    w = 20;
+}else{
+    w = 30;
+};
+for (i = 0; i < 5; i = i + 1) {
+    if (i > 0){
+        z = z + 1;
+    }else{
+        z = z + w
+    };
+};
+return z;
