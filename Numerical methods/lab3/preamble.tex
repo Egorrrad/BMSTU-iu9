@@ -1,0 +1,130 @@
+% Поля
+%--------------------------------------
+\usepackage{geometry}
+\geometry{a4paper,tmargin=2cm,bmargin=2cm,lmargin=3cm,rmargin=1cm}
+%--------------------------------------
+
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, main=russian]{babel}
+
+%--------------------------------------
+
+\usepackage{textcomp}
+
+% Красная строка
+%--------------------------------------
+\usepackage{indentfirst}               
+%--------------------------------------             
+
+
+%Graphics
+%--------------------------------------
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}%"Плавающие" картинки
+%--------------------------------------
+
+% Полуторный интервал
+%--------------------------------------
+\linespread{1.3}                    
+%--------------------------------------
+
+%Выравнивание и переносы
+%--------------------------------------
+% Избавляемся от переполнений
+\sloppy
+% Запрещаем разрыв страницы после первой строки абзаца
+\clubpenalty=10000
+% Запрещаем разрыв страницы после последней строки абзаца
+\widowpenalty=10000
+%--------------------------------------
+
+%Списки
+\usepackage{enumitem}
+
+%Подписи
+\usepackage{caption} 
+
+%Гиперссылки
+% \usepackage{hyperref}
+
+\usepackage[colorlinks, urlcolor = blue, filecolor = blue, citecolor = blue, linkcolor = black]{hyperref}
+
+
+\hypersetup {
+unicode=true
+}
+
+%Рисунки
+%--------------------------------------
+\DeclareCaptionLabelSeparator*{emdash}{~--- }
+\captionsetup[figure]{labelsep=emdash,font=onehalfspacing,position=bottom}
+%--------------------------------------
+
+\usepackage{tempora}
+
+%Листинги
+%--------------------------------------
+\usepackage{listings} % Пакет для отображения кода
+\usepackage{xcolor} % Пакет для цветных элементов
+
+\lstset{inputencoding=utf8, extendedchars=false, keepspaces = true}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.68,0.8,0.82}
+\definecolor{backcolour}{rgb}{0.9,0.9,0.9} 
+\definecolor{keyword}{rgb}{0.93, 0.68, 0.18}   % Оранжевые ключевые слова
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   % цвет фона
+    commentstyle=\color{codegreen},       % цвет комментариев
+    keywordstyle=\color{keyword},        % цвет ключевых слов
+    numberstyle=\tiny\color{codegray},    % стиль нумерации строк
+    stringstyle=\color{codegreen},       % цвет строк
+    basicstyle=\ttfamily\footnotesize,    % основной стиль текста
+    breakatwhitespace=false,              % перенос по пробелам
+    breaklines=true,                      % автоматический перенос строк
+    captionpos=b,                         % позиция заголовка внизу
+    keepspaces=true,                      % сохранять пробелы
+    numbers=left,                         % нумерация строк слева
+    numbersep=5pt,                        % отступ нумерации
+    showspaces=false,                     % скрывать пробелы
+    showstringspaces=false,               % скрывать пробелы в строках
+    showtabs=false,                       % скрывать табуляцию
+    tabsize=2                             % размер табуляции
+}
+
+\lstset{style=mystyle, inputencoding=utf8}
+
+
+
+%--------------------------------------
+
+%%% Математические пакеты %%%
+%--------------------------------------
+\usepackage{amsthm,amsfonts,amsmath,amssymb,amscd}  % Математические дополнения от AMS
+\usepackage{mathtools}                              % Добавляет окружение multlined
+\usepackage[perpage]{footmisc}
+
+
+% графики
+\usepackage{booktabs}        % Пакет для улучшенных таблиц
+\usepackage{pgfplots}        % Пакет для построения графиков
+\pgfplotsset{compat=1.17}    % Установка совместимости
+\usepackage{multirow}        % Для объединения строк
+\usepackage{graphicx} % Для поворота текста
+\usepackage{array}    % Для настройки колонок
+\usepackage{rotating} 
+
+% Литература 
+
+% переименовываем  список литературы в "список используемой литературы"
+\addto\captionsrussian{\def\refname{Список литературы}}
+
+
+
