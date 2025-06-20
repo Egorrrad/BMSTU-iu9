@@ -1,0 +1,87 @@
+digraph Lexer {
+    rankdir=LR;
+    node [shape = circle];
+
+    // Начальное состояние
+    start [label="START"];
+
+    // Explicit EOF state
+    eof [shape=doublecircle, label="EOF"];
+
+    start -> eof [label="EOF"];
+
+    // Whitespace
+    start -> ws [label="space, \\t, \\n, \\r"];
+    ws -> ws [label="space, \\t, \\n, \\r"];
+    ws [shape=doublecircle, label="Whitespace"];
+
+    // Number
+    start -> num [label="[0-9]"];
+    num -> num [label="[0-9]"];
+    num [shape=doublecircle, label="Number"];
+
+    // Keyword: switch (все состояния финальные для частичных ключевых слов)
+    start -> kw_s [label="s"];
+    kw_s [shape=doublecircle, label="s1"];
+    kw_s -> id [label="[a-zA-Z0-9 ^ w]"];
+
+    kw_s -> kw_sw [label="w"];
+    kw_sw [shape=doublecircle, label="s2"];
+    kw_sw -> id [label="[a-zA-Z0-9 ^ i]"];
+
+    kw_sw -> kw_swi [label="i"];
+    kw_swi [shape=doublecircle, label="s3"];
+    kw_swi -> id [label="[a-zA-Z0-9 ^ t]"];
+
+    kw_swi -> kw_swit [label="t"];
+    kw_swit [shape=doublecircle, label="s4"];
+    kw_swit -> id [label="[a-zA-Z0-9 ^ c]"];
+
+    kw_swit -> kw_switc [label="c"];
+    kw_switc [shape=doublecircle, label="s5"];
+    kw_switc -> id [label="[a-zA-Z0-9 ^ h]"];
+
+    kw_switc -> kw_switch [label="h"];
+    kw_switch [shape=doublecircle, label="Keyword (switch)"];
+
+    kw_switch -> id [label="[a-zA-Z0-9]"];
+
+    // Keyword: case
+    start -> kw_c [label="c"];
+    kw_c [shape=doublecircle, label="c1"];
+    kw_c -> id [label="[a-zA-Z0-9 ^ a]"];
+
+    kw_c -> kw_ca [label="a"];
+    kw_ca [shape=doublecircle, label="c2"];
+    kw_ca -> id [label="[a-zA-Z0-9 ^ s]"];
+
+    kw_ca -> kw_cas [label="s"];
+    kw_cas [shape=doublecircle, label="c3"];
+    kw_cas -> id [label="[a-zA-Z0-9 ^ e]"];
+
+    kw_cas -> kw_case [label="e"];
+    kw_case [shape=doublecircle, label="Keyword (case)"];
+
+    kw_case -> id [label="[a-zA-Z0-9]"];
+
+    // Identifier
+    start -> id [label="[a-zA-Z ^ {s,c}]"];
+    id -> id [label="[a-zA-Z0-9]"];
+    id [shape=doublecircle, label="Identifier"];
+
+    // Operators
+    start -> op_colon [label=":"];
+    op_colon [shape=doublecircle, label="Operator (:)"];
+
+    start -> op_lbrace [label="{"];
+    op_lbrace [shape=doublecircle, label="Operator ({)"];
+
+    start -> op_rbrace [label="}"];
+    op_rbrace [shape=doublecircle, label="Operator (})"];
+
+    // Comments
+    start -> com [label="!"];
+    com -> com [label="any except \\n"];
+    com -> end_com [label="\\n"];
+    end_com [shape=doublecircle, label="Comment"];
+}

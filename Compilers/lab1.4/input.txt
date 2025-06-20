@@ -1,0 +1,9 @@
+switch case x := 42
+12344
+! This is a comment
+{
+}
+unknown123
+1221
+switc
+cas

@@ -1,0 +1,5 @@
+111111
+23
+ident
+@"This is ""quoted"""
+"escaped\tstring"

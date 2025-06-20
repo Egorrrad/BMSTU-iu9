@@ -1,0 +1,10 @@
+count := 100 (* This is a comment *)
+q12345
+a + b * (c - d)
+@invalid_symbol
+abc123 (* Another comment with spaces *)
+x := y + 42
+(* Nested (* comments *) are not allowed *) *)
+123456
+123 + abc + 456
+12345
