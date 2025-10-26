@@ -279,7 +279,7 @@ class _YandexMapsWidgetState extends State<YandexMapsWidget> {
       navigationBar: CupertinoNavigationBar(
         backgroundColor: CupertinoColors.systemRed,
         middle: Text(
-          'Яндекс.Карты - Объекты',
+          'Яндекс.Карты',
           style: TextStyle(
             color: CupertinoColors.white,
             fontWeight: FontWeight.w600,
