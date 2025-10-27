@@ -10,7 +10,10 @@ import 'lab53.dart' as lab53;
 import 'let3.dart' as let3;
 import 'let4.dart' as let4;
 import 'lab6.dart' as lab6;
+import 'lab7.dart' as lab7;
+
 import 'rk1.dart' as rk1;
+
 
 void main() {
   runApp(const MyApp());
@@ -95,6 +98,11 @@ class _MainScreenState extends State<MainScreen> {
       title: 'РК1',
       description: 'Редактирование 3D моделей',
     ),
+    LabWork(
+      id: 11,
+      title: 'Лабораторная работа 7',
+      description: 'Захват объекта',
+    ),
   ];
 
   void _toggleMenu() {
@@ -160,6 +168,12 @@ class _MainScreenState extends State<MainScreen> {
       case 9:
         return MaterialApp(
           home: rk1.SkullApp(),
+          debugShowCheckedModeBanner: false,
+        );
+
+      case 10:
+        return MaterialApp(
+          home: lab7.MyApp(),
           debugShowCheckedModeBanner: false,
         );
 
