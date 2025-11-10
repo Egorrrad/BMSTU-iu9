@@ -185,7 +185,7 @@ class _MainScreenState extends State<MainScreen> {
 
       case 11:
         return MaterialApp(
-          home: lab8.FTPDemoScreen(),
+          home: lab8.FTPClientScreen(),
           debugShowCheckedModeBanner: false,
         );
       default:
