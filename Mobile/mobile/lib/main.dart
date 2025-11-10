@@ -11,6 +11,7 @@ import 'let3.dart' as let3;
 import 'let4.dart' as let4;
 import 'lab6.dart' as lab6;
 import 'lab7.dart' as lab7;
+import 'lab8.dart' as lab8;
 
 import 'rk1.dart' as rk1;
 
@@ -103,6 +104,11 @@ class _MainScreenState extends State<MainScreen> {
       title: 'Лабораторная работа 7',
       description: 'Захват объекта',
     ),
+    LabWork(
+      id: 12,
+      title: 'Лабораторная работа 8',
+      description: 'Протокол FTP',
+    ),
   ];
 
   void _toggleMenu() {
@@ -177,6 +183,11 @@ class _MainScreenState extends State<MainScreen> {
           debugShowCheckedModeBanner: false,
         );
 
+      case 11:
+        return MaterialApp(
+          home: lab8.FTPDemoScreen(),
+          debugShowCheckedModeBanner: false,
+        );
       default:
         return const Center(
           child: Text('Лабораторная работа не найдена'),
