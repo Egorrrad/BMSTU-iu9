@@ -7,13 +7,15 @@ import 'lab4.dart' as lab4;
 import 'lab52.dart' as lab52;
 import 'lab51.dart' as lab51;
 import 'lab53.dart' as lab53;
-import 'let3.dart' as let3;
-import 'let4.dart' as let4;
 import 'lab6.dart' as lab6;
 import 'lab7.dart' as lab7;
 import 'lab8.dart' as lab8;
 
 import 'rk1.dart' as rk1;
+
+import 'let3.dart' as let3;
+import 'let4.dart' as let4;
+import 'let5.dart' as let5;
 
 
 void main() {
@@ -109,6 +111,11 @@ class _MainScreenState extends State<MainScreen> {
       title: 'Лабораторная работа 8',
       description: 'Протокол FTP',
     ),
+    LabWork(
+      id: 13,
+      title: 'Летучка 5',
+      description: 'Клиент SMTP',
+    ),
   ];
 
   void _toggleMenu() {
@@ -186,6 +193,11 @@ class _MainScreenState extends State<MainScreen> {
       case 11:
         return MaterialApp(
           home: lab8.FTPClientScreen(),
+          debugShowCheckedModeBanner: false,
+        );
+      case 12:
+        return MaterialApp(
+          home: let5.MyApp(),
           debugShowCheckedModeBanner: false,
         );
       default:
