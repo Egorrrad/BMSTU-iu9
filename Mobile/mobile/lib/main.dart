@@ -16,6 +16,7 @@ import 'rk1.dart' as rk1;
 import 'let3.dart' as let3;
 import 'let4.dart' as let4;
 import 'let5.dart' as let5;
+import 'let6.dart' as let6;
 
 
 void main() {
@@ -116,6 +117,11 @@ class _MainScreenState extends State<MainScreen> {
       title: 'Летучка 5',
       description: 'Клиент SMTP',
     ),
+    LabWork(
+      id: 14,
+      title: 'Летучка 6',
+      description: 'Метод Карацубы',
+    ),
   ];
 
   void _toggleMenu() {
@@ -198,6 +204,11 @@ class _MainScreenState extends State<MainScreen> {
       case 12:
         return MaterialApp(
           home: let5.MyApp(),
+          debugShowCheckedModeBanner: false,
+        );
+      case 13:
+        return MaterialApp(
+          home: let6.MyApp(),
           debugShowCheckedModeBanner: false,
         );
       default:
