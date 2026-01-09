@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите матрицу в формате JSON:"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/matrixInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Пример: [[1,2,3],[4,5,6]]"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="5"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="РАССЧИТАТЬ SVD"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Результаты будут здесь..."
+            android:textSize="12sp"
+            android:fontFamily="monospace"/>
+    </ScrollView>
+
+</LinearLayout>
